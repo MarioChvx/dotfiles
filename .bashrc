@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#Set bell off
+set bell-style none
+
 #ALIASES
 alias rm="rm -I"
 alias lsdf="ls --group-directories-first"
@@ -129,3 +132,5 @@ alias topdf=_topdf
 # Alias to manage bare repo
 ## https://www.atlassian.com/git/tutorials/dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
+neofetch
