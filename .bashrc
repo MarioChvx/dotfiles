@@ -125,4 +125,7 @@ _topdf() {
 	pandoc -V geometry:margin=.5in $1.md -o $1.pdf
 }
 alias topdf=_topdf
-alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+
+# Alias to manage bare repo
+## https://www.atlassian.com/git/tutorials/dotfiles
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
