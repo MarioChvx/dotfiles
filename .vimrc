@@ -1,5 +1,7 @@
 let mapleader =" "
 
+" HOLA
+
 syntax on
 set belloff=all
 set wildignore=*.docx,*.pdf,*.exe
