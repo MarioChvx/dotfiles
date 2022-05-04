@@ -129,3 +129,4 @@ alias topdf=_topdf
 # Alias to manage bare repo
 ## https://www.atlassian.com/git/tutorials/dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+#hola
