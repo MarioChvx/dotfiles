@@ -9,7 +9,7 @@ set nocompatible
 set background=dark
 
 " Set color scheme (delek slate darkblue desert industry murphy ron torte pablo)
-colorscheme torte
+colorscheme delek
 
 " Set relative numbers:
 	set number relativenumber
