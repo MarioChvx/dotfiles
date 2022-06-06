@@ -1,12 +1,14 @@
 let mapleader =" "
 
-" HOLA
 
 syntax on
 set belloff=all
 set wildignore=*.docx,*.pdf,*.exe
 set nocompatible
 set background=dark
+set tabstop=3
+set shiftwidth=3
+set expandtab
 
 " Set color scheme (delek slate darkblue desert industry murphy ron torte pablo)
 colorscheme delek
