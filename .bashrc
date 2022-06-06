@@ -123,7 +123,7 @@ set bell-style none
 alias rm="rm -I"
 alias lsdf="ls --group-directories-first"
 alias poli="cd /mnt/d/OneDrive/IPN/'OneDrive - Instituto Politecnico Nacional'"
-alias portfolio="cd /mnt/f/Documents/0portfolio"
+alias portfolio="cd /mnt/f/Media/Documents/0portfolio"
 
 _topdf() {
 	echo $1;
