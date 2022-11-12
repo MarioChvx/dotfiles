@@ -75,7 +75,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto --group-directories-first'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -88,9 +88,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF --group-directories-first'
+alias la='ls -A --group-directories-first'
+alias l='ls -CF --group-directories-first'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -121,19 +121,17 @@ set bell-style none
 
 #ALIASES
 alias rm="rm -I"
-alias lsdf="ls --group-directories-first"
-alias poli="cd /mnt/d/OneDrive/IPN/'OneDrive - Instituto Politecnico Nacional'"
-alias portfolio="cd /mnt/f/Media/Documents/0portfolio"
+alias lsdf="ls "
+
+# Alias to manage bare repo
+## https://www.atlassian.com/git/tutorials/dotfiles
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 _topdf() {
 	echo $1;
 	pandoc -V geometry:margin=.5in $1.md -o $1.pdf
 }
 alias topdf=_topdf
-
-# Alias to manage bare repo
-## https://www.atlassian.com/git/tutorials/dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 #Run on terminal start up
 neofetch
