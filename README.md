@@ -1,4 +1,4 @@
-# Dot Files 
+# Dot Files
 
 My configuration for vim and bash.
 

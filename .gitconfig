@@ -2,4 +2,4 @@
 	email = mairochavez1292@gmail.com
 	name = Mario Chavez
 [core]
-	editor = nvim
+	editor = vim
