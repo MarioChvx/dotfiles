@@ -1,12 +1,12 @@
 " Vanila settings
 
 syntax enable
+set nocompatible                    "
 set bg=dark
 set belloff=all                     " Disable bell sound while moving
 set encoding=utf-8                  "
 set number relativenumber           " Set the numbers in the leftside
 set noswapfile                      "
-set nocompatible                    "
 set tabstop=4                       " Sets tab to n spaces
 set shiftwidth=4                    " Same as above
 set expandtab                       "
@@ -58,13 +58,12 @@ nnoremap <leader>o :call SpellLang()<CR>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'sheerun/vim-polyglot'     " languages support
-Plug 'itchyny/lightline.vim'    " status bar
 Plug 'morhetz/gruvbox'          " gruvbox theme
+Plug 'itchyny/lightline.vim'    " status bar
 Plug 'jiangmiao/auto-pairs'     " auto pairs characters
 Plug 'preservim/nerdtree'       " files tree
 Plug 'preservim/nerdcommenter'  " easier commenting
-Plug 'neoclide/coc.nvim'		" intellisense
+Plug 'sheerun/vim-polyglot'     " languages support
 Plug 'Yggdroot/indentLine'		" identline
 " terminal
 
@@ -83,9 +82,9 @@ let NERDTreeQuitOnOpen=1
 nmap <leader>t :NERDTreeToggle<CR>
 
 " identline
-let g:identLine_setColors = 239
-let g:indentLine_chart = 'c'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = "·"
 
 " https://www.youtube.com/watchcurl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
