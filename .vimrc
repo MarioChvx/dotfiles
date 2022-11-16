@@ -43,8 +43,13 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 1.2)<CR>
-nnoremap <silent> <Leader>_ :exe "resize " . (winheight(0) * 0.8)<CR>
+let g:delt_v = &lines / 10.0
+let g:delt_h = &columns / 10.0
+
+nmap <silent> <leader><Up> :exe "resize " . (winheight(0) + delt_v)<CR>
+nmap <silent> <leader><Down> :exe "resize " . (winheight(0) - delt_v)<CR>
+nmap <silent> <leader><Right> :exe "vertical resize " . (winwidth(0) + delt_h)<CR>
+nmap <silent> <leader><Left> :exe "vertical resize " . (winwidth(0) - delt_h)<CR>
 
 nnoremap <leader>m :only <CR>
 
