@@ -1,7 +1,8 @@
+
 " Vanila settings
 
 syntax enable
-set nocompatible                    "
+set nocompatible                    " setting to avoid compatibility isues
 set bg=dark
 set belloff=all                     " Disable bell sound while moving
 set encoding=utf-8                  "
@@ -18,8 +19,14 @@ set wildignore=*.docx,*.pdf,*.exe   " Unables to open binaryfiles
 set splitbelow
 set splitright
 
-" autocmd
+" kitty rendering problem
+let &t_ut=''
 
+" cursor changing
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" autocmd
 autocmd BufWritePre * %s/\s\+$//e   " Removes whithe spaces from the end of the lines
 
 " New keybindings
@@ -65,7 +72,7 @@ Plug 'preservim/nerdtree'       " files tree
 Plug 'preservim/nerdcommenter'  " easier commenting
 Plug 'sheerun/vim-polyglot'     " languages support
 Plug 'Yggdroot/indentLine'		" identline
-" terminal
+Plug 'voldikss/vim-floaterm'	" terminal
 
 
 call plug#end()
@@ -85,6 +92,16 @@ nmap <leader>t :NERDTreeToggle<CR>
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = "·"
+
+" floaterm
+nnoremap   <silent>   <F7>    :FloatermNew<CR>
+tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
+nnoremap   <silent>   <F8>    :FloatermPrev<CR>
+tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
+nnoremap   <silent>   <F9>    :FloatermNext<CR>
+tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
+nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
 " https://www.youtube.com/watchcurl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
