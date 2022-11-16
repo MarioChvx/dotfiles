@@ -77,6 +77,11 @@ Plug 'voldikss/vim-floaterm'	" terminal
 
 call plug#end()
 
+augroup my_colours
+  autocmd!
+  autocmd ColorScheme gruvbox hi SpellBad cterm=reverse
+augroup END
+
 " gruvbox
 let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
