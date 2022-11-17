@@ -1,21 +1,21 @@
 
-" Vanila settings
+" Vanilla settings
 
 syntax enable
-set nocompatible                    " setting to avoid compatibility isues
+set nocompatible                    " setting to avoid compatibility issues
 set bg=dark
 set belloff=all                     " Disable bell sound while moving
 set encoding=utf-8                  "
-set number relativenumber           " Set the numbers in the leftside
+set number relativenumber           " Set the numbers in the left side
 set noswapfile                      "
 set tabstop=4                       " Sets tab to n spaces
 set shiftwidth=4                    " Same as above
 set expandtab                       "
 set autoindent                      "
-set scrolloff=5                     " Keeps n lines of space while scroling
+set scrolloff=5                     " Keeps n lines of space while scrolling
 set backspace=indent,eol,start      " Can delete special characters
-set formatoptions-=cro              " Dissable autocomment
-set wildignore=*.docx,*.pdf,*.exe   " Unables to open binaryfiles
+set formatoptions-=cro              " Disable auto comment
+set wildignore=*.docx,*.pdf,*.exe   " Unable to open binary files
 set splitbelow
 set splitright
 
@@ -27,7 +27,7 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 " autocmd
-autocmd BufWritePre * %s/\s\+$//e   " Removes whithe spaces from the end of the lines
+autocmd BufWritePre * %s/\s\+$//e   " Removes white spaces from the end of the lines
 
 " New keybindings
 
@@ -37,7 +37,7 @@ nnoremap  <leader>q :q <CR>
 nnoremap  <leader>v :vsplit <CR>
 nnoremap  <leader>h :split <CR>
 
-" move trought panels with ctrl-[hjkl]
+" move through panels with ctrl-[hjkl]
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
@@ -66,7 +66,7 @@ endf
 
 nnoremap <leader>o :call SpellLang()<CR>
 
-" Pluggins
+" Plugins
 
 call plug#begin('~/.vim/plugged')
 
