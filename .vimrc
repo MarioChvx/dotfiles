@@ -8,9 +8,6 @@ set belloff=all                     " Disable bell sound while moving
 set encoding=utf-8                  "
 set number relativenumber           " Set the numbers in the left side
 set noswapfile                      "
-set tabstop=4                       " Sets tab to n spaces
-set shiftwidth=4                    " Same as above
-set expandtab                       "
 set autoindent                      "
 set scrolloff=5                     " Keeps n lines of space while scrolling
 set backspace=indent,eol,start      " Can delete special characters
@@ -18,6 +15,10 @@ set formatoptions-=cro              " Disable auto comment
 set wildignore=*.docx,*.pdf,*.exe   " Unable to open binary files
 set splitbelow
 set splitright
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " kitty rendering problem
 let &t_ut=''
@@ -57,11 +58,11 @@ let g:lang = 0
 let g:langList = ["nospell", "English US", "Spanish"]
 function! SpellLang()
     let g:lang = g:lang + 1
-	if g:lang >= len(g:langList) | let g:lang = 0 | endif
-	if g:lang == 0 | setlocal nospell | endif
-	if g:lang == 1 | setlocal spell spelllang=en_us | endif
-	if g:lang == 2 | setlocal spell spelllang=es | endif
-	echo "Spell check set to: " g:langList[g:lang]
+    if g:lang >= len(g:langList) | let g:lang = 0 | endif
+    if g:lang == 0 | setlocal nospell | endif
+    if g:lang == 1 | setlocal spell spelllang=en_us | endif
+    if g:lang == 2 | setlocal spell spelllang=es | endif
+    echo "Spell check set to: " g:langList[g:lang]
 endf
 
 nnoremap <leader>o :call SpellLang()<CR>
@@ -102,6 +103,7 @@ nmap <leader>t :NERDTreeToggle<CR>
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = "·"
+let g:indentLine_showFirstIndentLevel = 1
 
 " floaterm
 nnoremap   <silent>   <F7>    :FloatermNew<CR>
