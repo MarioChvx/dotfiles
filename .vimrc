@@ -37,6 +37,3 @@ augroup END
 " import settings
 source .vim/plugins.vim
 source .vim/keybinds.vim
-
-" https://www.youtube.com/watchcurl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-

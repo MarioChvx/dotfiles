@@ -36,18 +36,3 @@ function! SpellLang()
 endf
 
 nnoremap <leader>o :call SpellLang()<CR>
-
-" nerdtree
-nmap <leader>t :NERDTreeToggle<CR>
-
-" floaterm
-nnoremap   <silent>   <F7>    :FloatermNew<CR>
-tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
-nnoremap   <silent>   <F8>    :FloatermPrev<CR>
-tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
-nnoremap   <silent>   <F9>    :FloatermNext<CR>
-tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
-nnoremap   <silent>   <F10>   :FloatermToggle<CR>
-tnoremap   <silent>   <F10>   <C-\><C-n>:FloatermToggle<CR>
-
-
