@@ -45,7 +45,7 @@ alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 **Be careful** this command will overwrite the current files that are in $HOME directory.
 
 ```bash
-config checkout
+dotgit checkout -f
 ```
 
 ### Vim
