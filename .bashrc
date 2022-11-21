@@ -26,4 +26,4 @@ export LS_COLORS
 
 #Run on terminal start up
 bind -x '"\C-l": clear;'
-neofetch --ascii_distro ubuntu_small
+neofetch -L
