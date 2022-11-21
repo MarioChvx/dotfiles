@@ -47,3 +47,12 @@ alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```bash
 config checkout
 ```
+
+### Vim
+
+Just remember to install vim-plug to use the plugins.
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
