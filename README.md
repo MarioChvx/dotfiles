@@ -31,7 +31,7 @@ echo ".cfg" >> .gitignore
 #### Clone the repository
 
 ```bash
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare git@github.com:MarioChvx/dotfiles.git $HOME/.cfg
 ```
 
 #### Define the alias in the shell scop
