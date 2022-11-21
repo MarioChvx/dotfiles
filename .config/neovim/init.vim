@@ -69,4 +69,4 @@ function! SpellLang()
     echo "Spell check set to: " g:langList[g:lang]
 endf
 
-nnoremap <leader>o :call SpellLang()<CR>
+nnoremap <leader>o :call SpellLang()<CR
