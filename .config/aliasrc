@@ -2,9 +2,9 @@
 
 # ALIASES
 alias ls='ls --color --group-directories-first'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF --color --group-directories-first'
+alias la='ls -A --color --group-directories-first'
+alias l='ls -CF --color --group-directories-first'
 alias rm="rm -I"
 alias dotgit="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 

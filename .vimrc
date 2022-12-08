@@ -1,5 +1,11 @@
-" vanilla settings
 
+"	       (_)
+"	 __   ___ _ __ ___  _ __ ___
+"	 \ \ / / | '_ ` _ \| '__/ __|
+"	  \ V /| | | | | | | | | (__
+"	 (_)_/ |_|_| |_| |_|_|  \___|
+
+" vanilla settings
 syntax enable
 set nocompatible                    " setting to avoid compatibility issues
 set bg=dark
@@ -15,9 +21,10 @@ set wildignore=*.docx,*.pdf,*.exe   " Unable to open binary files
 set splitbelow splitright
 
 " specific languages
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype vim        setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype python     setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype c          setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype markdown   setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " kitty rendering problem
 let &t_ut=''
@@ -30,8 +37,8 @@ let &t_EI = "\e[2 q"
 autocmd BufWritePre * %s/\s\+$//e   " Removes white spaces from the end of the lines
 
 augroup my_colours
-  autocmd!
-  autocmd ColorScheme gruvbox hi SpellBad cterm=reverse
+    autocmd!
+    autocmd ColorScheme gruvbox hi SpellBad cterm=reverse
 augroup END
 
 let mapleader =" "
@@ -70,3 +77,22 @@ function! SpellLang()
 endf
 
 nnoremap <leader>o :call SpellLang()<CR>
+
+call plug#begin()
+
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'Yggdroot/indentLine'
+
+call plug#end()
+
+colorscheme gruvbox
+set laststatus=2
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = '·'
+
+
+
+
