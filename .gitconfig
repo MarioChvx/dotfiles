@@ -4,3 +4,6 @@
 	mail = mariochave1292@gmail.com
 [core]
 	editor = vim
+
+[init]
+	defaultBranch = main
