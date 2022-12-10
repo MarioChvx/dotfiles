@@ -19,13 +19,14 @@ set backspace=indent,eol,start      " Can delete special characters
 set formatoptions-=cro              " Disable auto comment
 set wildignore=*.docx,*.pdf,*.exe   " Unable to open binary files
 set splitbelow splitright
-set conceallevel=0
+
 
 " specific languages
 autocmd Filetype vim        setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype python     setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype c          setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype markdown   setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufEnter *.md set conceallevel=0
 
 " kitty rendering problem
 let &t_ut=''
@@ -90,7 +91,4 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
-
-
-
 
