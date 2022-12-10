@@ -19,6 +19,7 @@ set backspace=indent,eol,start      " Can delete special characters
 set formatoptions-=cro              " Disable auto comment
 set wildignore=*.docx,*.pdf,*.exe   " Unable to open binary files
 set splitbelow splitright
+set conceallevel=0
 
 " specific languages
 autocmd Filetype vim        setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -35,11 +36,6 @@ let &t_EI = "\e[2 q"
 
 " autocmd
 autocmd BufWritePre * %s/\s\+$//e   " Removes white spaces from the end of the lines
-
-augroup my_colours
-    autocmd!
-    autocmd ColorScheme gruvbox hi SpellBad cterm=reverse
-augroup END
 
 let mapleader =" "
 nnoremap  <leader>w :w! <CR>
@@ -75,6 +71,8 @@ function! SpellLang()
     if g:lang == 2 | setlocal spell spelllang=es | endif
     echo "Spell check set to: " g:langList[g:lang]
 endf
+
+autocmd ColorScheme gruvbox hi SpellBad cterm=reverse ctermbg=15 ctermfg=9
 
 nnoremap <leader>o :call SpellLang()<CR>
 
