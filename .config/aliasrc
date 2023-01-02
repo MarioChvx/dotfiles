@@ -8,9 +8,9 @@ alias l='ls -CF --color --group-directories-first'
 alias rm="rm -I"
 alias dotgit="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
-_topdf() {
+_mdtopdf() {
 	echo $1;
 	pandoc -V geometry:margin=.5in $1.md -o $1.pdf
 }
-alias topdf=_topdf
+alias mdtopdf=_mdtopdf
 
