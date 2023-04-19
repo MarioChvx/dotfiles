@@ -1,2 +1,5 @@
 require('core.plugin_conf.lualine')
 require('core.plugin_conf.gruvbox')
+require('core.plugin_conf.lspconfig')
+require('core.plugin_conf.nvim-tree')
+require('core.plugin_conf.indent-blankline')

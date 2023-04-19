@@ -16,6 +16,9 @@ return require('packer').startup(function(use)
   use 'ellisonleao/gruvbox.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-tree/nvim-tree.lua'
+  use 'lukas-reineke/indent-blankline.nvim'
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'

@@ -2,4 +2,5 @@
 .vim/autoload
 .vim/plugged
 .vim/spell
+.config/nvim/plugin 
 
