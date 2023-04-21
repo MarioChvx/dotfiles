@@ -20,5 +20,24 @@ function hugo_server() {
 
 # https://www.tylerquinlivan.com/posts/hugo_on_wsl/
 
+push_my_repos() {
+  # Loop through all folders in the current working directory and push changes if they are git repositories
+  for folder in */; do
+    cd "$folder"
+    if [[ -d .git ]]; then
+      printf "\n\nChecking the $folder repo "
+      git pull origin main
+      if [[ $? -ne 0 ]]; then
+        printf "\nSkipping the $folder repo (pull failed)"
+        continue
+      fi
+      git commit -a -m "Uploaded by script, no commit msg added"
+      if [[ $? -eq 0 ]]; then
+        git push origin main
+      fi
+    fi
+    cd ..
+  done
+}
 
 
