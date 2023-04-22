@@ -1,5 +1,12 @@
-require('core.plugins')
-require('core.plugin_conf')
-require('core.keymaps')
-require('core.conf')
--- Hola
+
+require('mario.keymaps')
+require('mario.vanilla_conf')
+
+if vim.g.vscode then
+    	-- VSCode extension
+else
+    	-- ordinary Neovim
+	require('mario.packer')
+	require('mario.plugins_conf')
+end
+
