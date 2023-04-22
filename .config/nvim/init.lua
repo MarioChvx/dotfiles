@@ -8,7 +8,7 @@ else
     require('mario.keymaps')
     require('mario.packer')
     require('mario.plugins_conf')
-    require('mario.colors')
+    -- require('mario.colors')
     require('mario.keymaps')
 end
 
