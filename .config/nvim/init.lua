@@ -3,7 +3,9 @@
 
 if vim.g.vscode then
     -- VSCode extension
+    require('mario.vanilla_conf')
 else
+    require('mario.vanilla_conf')
     -- ordinary Neovim
     require('mario.keymaps')
     require('mario.packer')
@@ -12,5 +14,4 @@ else
     require('mario.keymaps')
 end
 
-require('mario.vanilla_conf')
 
