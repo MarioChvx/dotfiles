@@ -1,12 +1,12 @@
 # Dot Files
 
-My configuration for vim and bash. I got the idea from [Distro Tube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) and he gots the idea from [Atlassian](https://www.atlassian.com/git/tutorials/dotfiles).
+My configuration for nvim, vim, bash and neofetch. I got the idea of using a bare repo from [Distro Tube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) and he gots the idea from [Atlassian](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ## Set-up guide
 
 ### SSH
 
-Just a remember of how to set up ssh for each kind of system.
+Just a quick remember of how to set up ssh for each kind of system.
 
 #### Linux/Windows
 
@@ -47,8 +47,17 @@ alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```bash
 dotgit checkout -f
 ```
+## After clonig
 
-### Vim
+### nvim
+
+Open nvim and run:
+
+```nvim
+:PackerSync
+```
+
+### vim
 
 Just remember to install vim-plug to use the plugins.
 
