@@ -49,6 +49,17 @@ dotgit checkout -f
 ```
 ## After clonig
 
+### packages
+
+```bash
+nvim vim clang g++ curl git wget go hugo htop
+```
+Install `anaconda` and`nvm`. After installing conda install mamaba and run 
+
+```bash
+conda config --set auto_activate_base false
+```
+
 ### nvim
 
 Open nvim and run:
