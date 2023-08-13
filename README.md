@@ -31,7 +31,7 @@ echo ".cfg" >> .gitignore
 #### Clone the repository
 
 ```bash
-git clone --bare git@github.com:MarioChvx/dotfiles.git $HOME/.cfg
+git clone --bare https://github.com/MarioChvx/dotfiles.git $HOME/.cfg
 ```
 
 #### Define the alias in the shell scop
@@ -52,9 +52,9 @@ dotgit checkout -f
 ### packages
 
 ```bash
-nvim vim clang g++ curl git wget go hugo htop
+neovim vim clang g++ curl git wget go hugo htop
 ```
-Install `anaconda` and`nvm`. After installing conda install mamaba and run 
+Install `anaconda` and`nvm`. After installing conda install mamaba and run to prevent auto start
 
 ```bash
 conda config --set auto_activate_base false
@@ -76,3 +76,5 @@ Just remember to install vim-plug to use the plugins.
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+And then on vim `PlugInstall`
