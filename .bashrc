@@ -31,17 +31,21 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mario/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/mario/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/mario/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mario/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/mario/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mario/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/mario/anaconda3/bin:$PATH"
+        export PATH="/home/mario/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/home/mario/miniconda3/etc/profile.d/mamba.sh" ]; then
+    . "/home/mario/miniconda3/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
 
@@ -49,3 +53,4 @@ unset __conda_setup
 # Ctrl + l to clear up
 bind -x '"\C-l": clear;'
 
+cd /home/mario
