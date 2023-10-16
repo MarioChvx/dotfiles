@@ -52,5 +52,3 @@ fi
 ### Run on terminal start
 # Ctrl + l to clear up
 bind -x '"\C-l": clear;'
-
-cd /home/mario
